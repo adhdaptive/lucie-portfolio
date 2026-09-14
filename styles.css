@@ -4,7 +4,13 @@
 */
 
 /* 01) Typography */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
 
 /* 02) Base */
 :root {
