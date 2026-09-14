@@ -1,6 +1,6 @@
 /*
   Lucie portfolio
-  Base colour and typography definitions
+  First homepage prototype
 */
 
 /* 01) Typography */
@@ -12,9 +12,9 @@
   font-display: swap;
 }
 
-/* 02) Base */
+/* 02) Design tokens */
 :root {
-  /* Starboard colour palette */
+  /* Lucie's selected colour palette */
   --ink: #10151d;
   --sea-blue: #55b8d1;
   --soft-aqua: #bfe4e1;
@@ -31,7 +31,14 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Base theme roles */
+  /* Layout */
+  --content-width: 1180px;
+  --page-gutter: clamp(1.1rem, 3vw, 2.25rem);
+  --section-space: clamp(4.5rem, 8vw, 8rem);
+  --small-radius: 0.8rem;
+  --large-radius: 1.6rem;
+
+  /* Theme roles */
   --colour-text: var(--ink);
   --colour-background: var(--warm-cream);
   --colour-link: var(--deep-ocean);
@@ -39,14 +46,17 @@
   --colour-accent: var(--sunset-coral);
 }
 
-/* Use predictable box sizing across the site. */
+/* 03) Base */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Set the site-wide typeface and Starboard base colours. */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--colour-background);
@@ -56,7 +66,19 @@ body {
   line-height: 1.6;
 }
 
-/* Keep headings strong without changing Lucie's chosen typeface. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure,
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
 h1,
 h2,
 h3,
@@ -65,16 +87,408 @@ h5,
 h6 {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
-  line-height: 1.2;
+  line-height: 1.12;
 }
 
-/* Apply the darker ocean tone to normal links. */
 a {
   color: var(--colour-link);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
 }
 
-/* Use sea blue for hover and keyboard-focus feedback. */
 a:hover,
 a:focus-visible {
   color: var(--colour-link-hover);
+}
+
+/* Keep keyboard focus obvious across light and dark sections. */
+:focus-visible {
+  outline: 3px solid var(--cat-eye-yellow);
+  outline-offset: 4px;
+}
+
+/* Respect visitors who have reduced motion enabled. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* 04) Shared layout */
+.container {
+  width: min(calc(100% - (2 * var(--page-gutter))), var(--content-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+.section-heading {
+  max-width: 44rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section-heading h2,
+.about-contact h2,
+.starboard h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+.section-heading p:last-child,
+.about-contact p:last-child,
+.starboard__copy p:last-child {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--deep-ocean);
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow--light {
+  color: var(--soft-aqua);
+}
+
+/* 05) Skip link */
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-180%);
+  border-radius: 0.5rem;
+  background: var(--ink);
+  color: var(--warm-cream);
+  font-weight: var(--font-weight-bold);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: var(--warm-cream);
+}
+
+/* 06) Header */
+.site-header {
+  border-bottom: 1px solid rgba(16, 21, 29, 0.12);
+  background: var(--warm-cream);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 5.25rem;
+}
+
+.site-name {
+  color: var(--ink);
+  font-size: 1.45rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.site-nav a {
+  color: var(--ink);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--deep-ocean);
+}
+
+/* 07) Hero */
+.hero {
+  padding-top: clamp(2.5rem, 5vw, 5rem);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.hero__copy h1 {
+  max-width: 8ch;
+  margin-bottom: 1.25rem;
+  font-size: clamp(3.4rem, 7.5vw, 7rem);
+  letter-spacing: -0.045em;
+}
+
+.hero__intro {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--warm-cream);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--deep-ocean);
+  color: #ffffff;
+}
+
+.hero__art {
+  overflow: hidden;
+  margin: 0;
+  border-radius: var(--large-radius);
+  background: var(--soft-aqua);
+}
+
+.hero__art img {
+  width: 100%;
+  height: auto;
+}
+
+/* 08) Services */
+.services {
+  background: var(--soft-aqua);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  min-height: 15rem;
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  border-top: 0.45rem solid var(--card-accent);
+  border-radius: 0 0 var(--small-radius) var(--small-radius);
+  background: var(--warm-cream);
+}
+
+.service-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+}
+
+.service-card p {
+  margin-bottom: 0;
+}
+
+.service-card--puppets {
+  --card-accent: var(--cat-eye-yellow);
+}
+
+.service-card--characters {
+  --card-accent: var(--sunset-coral);
+}
+
+.service-card--branding {
+  --card-accent: var(--sea-pink);
+}
+
+.service-card--worlds {
+  --card-accent: var(--deep-ocean);
+}
+
+/* 09) Selected work */
+.section-heading--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 25rem);
+  align-items: end;
+  gap: 2rem;
+  max-width: none;
+}
+
+.section-heading--split > p {
+  margin-bottom: 0.55rem;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.work-card {
+  margin: 0;
+}
+
+.work-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--small-radius);
+  background: #ffffff;
+}
+
+.work-card figcaption {
+  padding-top: 0.7rem;
+  font-size: 0.92rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 10) Starboard */
+.starboard {
+  background: var(--deep-ocean);
+  color: #ffffff;
+}
+
+.starboard__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.starboard__copy {
+  max-width: 34rem;
+}
+
+.starboard__logo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--large-radius);
+  background: #ffffff;
+}
+
+.starboard__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.starboard__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+}
+
+.starboard__gallery figure {
+  margin: 0;
+}
+
+.starboard__gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--small-radius);
+  background: #ffffff;
+}
+
+/* 11) About and contact */
+.about-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.contact-panel {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: var(--large-radius);
+  background: var(--cat-eye-yellow);
+}
+
+.contact-panel .eyebrow {
+  color: var(--ink);
+}
+
+/* 12) Footer */
+.site-footer {
+  padding-block: 2rem;
+  background: var(--ink);
+  color: var(--warm-cream);
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 13) Tablet */
+@media (max-width: 900px) {
+  .hero__grid,
+  .starboard__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__copy h1 {
+    max-width: 10ch;
+  }
+
+  .hero__art {
+    max-width: 42rem;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-heading--split,
+  .about-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .starboard__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 14) Mobile */
+@media (max-width: 620px) {
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: 1rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 0.8rem 1.25rem;
+  }
+
+  .hero__copy h1 {
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .service-grid,
+  .work-gallery,
+  .starboard__gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 }
