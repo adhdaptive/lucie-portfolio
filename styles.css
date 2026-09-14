@@ -1,0 +1,74 @@
+/*
+  Lucie portfolio
+  Base colour and typography definitions
+*/
+
+/* 01) Typography */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* 02) Base */
+:root {
+  /* Starboard colour palette */
+  --ink: #10151d;
+  --sea-blue: #55b8d1;
+  --soft-aqua: #bfe4e1;
+  --warm-cream: #f7f2e8;
+  --sunset-coral: #e98b69;
+  --sea-pink: #d98fa0;
+  --cat-eye-yellow: #f3c735;
+  --deep-ocean: #176d8d;
+
+  /* Typography */
+  --font-primary: 'Quicksand', 'Trebuchet MS', Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Base theme roles */
+  --colour-text: var(--ink);
+  --colour-background: var(--warm-cream);
+  --colour-link: var(--deep-ocean);
+  --colour-link-hover: var(--sea-blue);
+  --colour-accent: var(--sunset-coral);
+}
+
+/* Use predictable box sizing across the site. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set the site-wide typeface and Starboard base colours. */
+body {
+  margin: 0;
+  background: var(--colour-background);
+  color: var(--colour-text);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+}
+
+/* Keep headings strong without changing Lucie's chosen typeface. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+/* Apply the darker ocean tone to normal links. */
+a {
+  color: var(--colour-link);
+}
+
+/* Use sea blue for hover and keyboard-focus feedback. */
+a:hover,
+a:focus-visible {
+  color: var(--colour-link-hover);
+}
