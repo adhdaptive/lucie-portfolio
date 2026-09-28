@@ -1,5 +1,5 @@
 /*
-  Lucie portfolio
+  Unspoken Illusions portfolio
   First homepage prototype
 */
 
@@ -190,8 +190,9 @@ a:focus-visible {
 
 .site-name {
   color: var(--ink);
-  font-size: 1.45rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
   font-weight: var(--font-weight-bold);
+  line-height: 1.1;
   text-decoration: none;
 }
 
@@ -225,9 +226,9 @@ a:focus-visible {
 }
 
 .hero__copy h1 {
-  max-width: 8ch;
+  max-width: 12ch;
   margin-bottom: 1.25rem;
-  font-size: clamp(3.4rem, 7.5vw, 7rem);
+  font-size: clamp(3.2rem, 6.8vw, 6.4rem);
   letter-spacing: -0.045em;
 }
 
@@ -438,7 +439,7 @@ a:focus-visible {
   }
 
   .hero__copy h1 {
-    max-width: 10ch;
+    max-width: 12ch;
   }
 
   .hero__art {
