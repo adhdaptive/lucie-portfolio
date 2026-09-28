@@ -15,7 +15,6 @@
       <a class="site-name" href="#top" aria-label="Unspoken Illusions home">Unspoken Illusions</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#work">Work</a>
-        <a href="#services">Services</a>
         <a href="#starboard">Starboard</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -29,7 +28,7 @@
           <p class="eyebrow">Illustration by Lucie</p>
           <h1>Unspoken Illusions</h1>
           <p class="hero__intro">Stories told without words.</p>
-          <a class="button" href="#work">See selected work</a>
+          <a class="button" href="#work">Explore the gallery</a>
         </div>
 
         <figure class="hero__art">
@@ -38,68 +37,437 @@
       </div>
     </section>
 
-    <section class="section services" id="services" aria-labelledby="services-title">
+    <section class="section portfolio-browser" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Commissions</p>
-          <h2 id="services-title">Four creative services</h2>
-          <p>Each area can grow into its own portfolio page as the work is selected.</p>
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="work-title">Explore the work</h2>
+          <p>Choose a project or open any piece to view it larger.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card service-card--puppets">
-            <h3>Puppets</h3>
-            <p>Design, making and puppet-based commission work.</p>
-          </article>
-
-          <article class="service-card service-card--characters">
-            <h3>Character Design</h3>
-            <p>A distinct service for creating original characters.</p>
-          </article>
-
-          <article class="service-card service-card--branding">
-            <h3>Branding</h3>
-            <p>Visual identity and creative assets for clients.</p>
-          </article>
-
-          <article class="service-card service-card--worlds">
-            <h3>Worlds</h3>
-            <p>Maps, narrative artwork and illustrated settings.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section selected-work" id="work" aria-labelledby="work-title">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow">Selected work</p>
-            <h2 id="work-title">A small starting selection</h2>
-          </div>
-          <p>Large images first, with space for the wider portfolio to grow around them.</p>
+        <div class="gallery-filters" role="group" aria-label="Filter portfolio">
+          <button class="gallery-filter" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="mass-hysteria" aria-pressed="false">Mass Hysteria</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="tune-up" aria-pressed="false">Tune Up</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="other" aria-pressed="false">Other</button>
+          <button class="gallery-filter" type="button" data-gallery-filter="starboard" aria-pressed="false">Starboard &amp; the Sea-Cat</button>
         </div>
 
-        <div class="work-gallery">
-          <figure class="work-card">
-            <img src="/images/portfolio/character-design-retro-computer-pair.webp" alt="Two illustrated original characters, one holding a retro computer" loading="lazy" decoding="async">
-            <figcaption>Character design</figcaption>
-          </figure>
-
-          <figure class="work-card">
-            <img src="/images/portfolio/character-illustration-band.webp" alt="Colourful illustrated characters performing together in a band" loading="lazy" decoding="async">
-            <figcaption>Character illustration</figcaption>
-          </figure>
-
-          <figure class="work-card">
-            <img src="/images/portfolio/character-illustration-sunflower-photographer.webp" alt="Illustrated character holding a camera beside sunflowers" loading="lazy" decoding="async">
-            <figcaption>Character illustration</figcaption>
-          </figure>
-
-          <figure class="work-card">
-            <img src="/images/portfolio/starboard-island-map.webp" alt="Illustrated island map showing villages, woodland, shops, piers, a beach and lighthouse" loading="lazy" decoding="async">
-            <figcaption>Worlds and maps</figcaption>
-          </figure>
+        <div class="portfolio-gallery" aria-live="polite">
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="21CBD">
+          <button type="button" class="gallery-open" aria-label="View 21CBD from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/album_21cbd.jpg" alt="21CBD, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>21CBD</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Evermore">
+          <button type="button" class="gallery-open" aria-label="View Evermore from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/album_evermore.jpg" alt="Evermore, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Evermore</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Heat Abnormal">
+          <button type="button" class="gallery-open" aria-label="View Heat Abnormal from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/album_heat_abnormal.jpg" alt="Heat Abnormal, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Heat Abnormal</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="MCR">
+          <button type="button" class="gallery-open" aria-label="View MCR from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/album_mcr.jpg" alt="MCR, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>MCR</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Archie birthday illustration">
+          <button type="button" class="gallery-open" aria-label="View Archie birthday illustration from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/bday_archie.jpg" alt="Archie birthday illustration, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Archie birthday illustration</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Dove birthday illustration">
+          <button type="button" class="gallery-open" aria-label="View Dove birthday illustration from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/bday_dove.jpg" alt="Dove birthday illustration, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Dove birthday illustration</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Gloria birthday illustration">
+          <button type="button" class="gallery-open" aria-label="View Gloria birthday illustration from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/bday_gloria.jpg" alt="Gloria birthday illustration, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Gloria birthday illustration</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Bonnie">
+          <button type="button" class="gallery-open" aria-label="View Bonnie from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/bonnie.jpg" alt="Bonnie, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Bonnie</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Comic test">
+          <button type="button" class="gallery-open" aria-label="View Comic test from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/comic_test.jpg" alt="Comic test, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Comic test</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Evelyn and lilies">
+          <button type="button" class="gallery-open" aria-label="View Evelyn and lilies from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/evelyn_lilies.jpg" alt="Evelyn and lilies, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Evelyn and lilies</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Fox with guitar">
+          <button type="button" class="gallery-open" aria-label="View Fox with guitar from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/fox_guitar.jpg" alt="Fox with guitar, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Fox with guitar</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Glorinix">
+          <button type="button" class="gallery-open" aria-label="View Glorinix from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/glorinix.jpg" alt="Glorinix, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Glorinix</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Character height chart">
+          <button type="button" class="gallery-open" aria-label="View Character height chart from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/height_chart.jpg" alt="Character height chart, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Character height chart</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Part 1 cover">
+          <button type="button" class="gallery-open" aria-label="View Part 1 cover from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/part1_cover.jpg" alt="Part 1 cover, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Part 1 cover</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Adam character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Adam character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_adam.jpg" alt="Adam character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Adam character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Archie character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Archie character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_archie.jpg" alt="Archie character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Archie character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Gloria character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Gloria character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_gloria.jpg" alt="Gloria character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Gloria character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Phoenix character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Phoenix character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_phoenix.jpg" alt="Phoenix character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Phoenix character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Tiff character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Tiff character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_tiff.jpg" alt="Tiff character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Tiff character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="mass-hysteria" data-gallery-project="Mass Hysteria" data-gallery-title="Wendy character turnaround">
+          <button type="button" class="gallery-open" aria-label="View Wendy character turnaround from Mass Hysteria">
+            <img src="/images/projects/comic-mass-hysteria/turnaround_wendy.jpg" alt="Wendy character turnaround, artwork from Mass Hysteria" loading="lazy" decoding="async">
+            <span>Wendy character turnaround</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Barry">
+          <button type="button" class="gallery-open" aria-label="View Barry from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/barry_no_text.jpg" alt="Barry, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Barry</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Barry with text">
+          <button type="button" class="gallery-open" aria-label="View Barry with text from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/barry_text.jpg" alt="Barry with text, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Barry with text</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Demi concepts">
+          <button type="button" class="gallery-open" aria-label="View Demi concepts from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/demi_concepts.jpg" alt="Demi concepts, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Demi concepts</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Demi">
+          <button type="button" class="gallery-open" aria-label="View Demi from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/demi_no_text.jpg" alt="Demi, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Demi</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Demi with text">
+          <button type="button" class="gallery-open" aria-label="View Demi with text from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/demi_text.jpg" alt="Demi with text, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Demi with text</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Divine Drive bass">
+          <button type="button" class="gallery-open" aria-label="View Divine Drive bass from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/divine_drive_bass.jpg" alt="Divine Drive bass, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Divine Drive bass</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Farrell hairstyles">
+          <button type="button" class="gallery-open" aria-label="View Farrell hairstyles from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/farrell_hairstyles.jpg" alt="Farrell hairstyles, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Farrell hairstyles</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Farrell">
+          <button type="button" class="gallery-open" aria-label="View Farrell from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/farrell_no_text.jpg" alt="Farrell, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Farrell</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Farrell with text">
+          <button type="button" class="gallery-open" aria-label="View Farrell with text from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/farrell_text.jpg" alt="Farrell with text, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Farrell with text</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci concepts">
+          <button type="button" class="gallery-open" aria-label="View Staci concepts from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_concepts.jpg" alt="Staci concepts, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci concepts</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci cosplay">
+          <button type="button" class="gallery-open" aria-label="View Staci cosplay from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_cosplay.jpg" alt="Staci cosplay, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci cosplay</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci hairstyles">
+          <button type="button" class="gallery-open" aria-label="View Staci hairstyles from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_hairstyles.jpg" alt="Staci hairstyles, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci hairstyles</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci with keytar">
+          <button type="button" class="gallery-open" aria-label="View Staci with keytar from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_keytar.jpg" alt="Staci with keytar, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci with keytar</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci">
+          <button type="button" class="gallery-open" aria-label="View Staci from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_no_text.jpg" alt="Staci, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Staci with text">
+          <button type="button" class="gallery-open" aria-label="View Staci with text from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/staci_text.jpg" alt="Staci with text, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Staci with text</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="tune-up" data-gallery-project="Tune Up" data-gallery-title="Tune Up title screen">
+          <button type="button" class="gallery-open" aria-label="View Tune Up title screen from Tune Up">
+            <img src="/images/projects/concept-game-tune-up/title_screen.jpg" alt="Tune Up title screen, artwork from Tune Up" loading="lazy" decoding="async">
+            <span>Tune Up title screen</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Fraggle Rock: Radish">
+          <button type="button" class="gallery-open" aria-label="View Fraggle Rock: Radish from Other">
+            <img src="/images/projects/other/Fraggle_rock_radish.jpg" alt="Fraggle Rock: Radish, artwork from Other" loading="lazy" decoding="async">
+            <span>Fraggle Rock: Radish</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Fraggle Rock: Put It All Together">
+          <button type="button" class="gallery-open" aria-label="View Fraggle Rock: Put It All Together from Other">
+            <img src="/images/projects/other/fraggle_rock_putitalltogether.jpg" alt="Fraggle Rock: Put It All Together, artwork from Other" loading="lazy" decoding="async">
+            <span>Fraggle Rock: Put It All Together</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Fraggle Rock: Strawberries vs Radishes">
+          <button type="button" class="gallery-open" aria-label="View Fraggle Rock: Strawberries vs Radishes from Other">
+            <img src="/images/projects/other/fraggle_rock_strawberriesvsradishes.jpg" alt="Fraggle Rock: Strawberries vs Radishes, artwork from Other" loading="lazy" decoding="async">
+            <span>Fraggle Rock: Strawberries vs Radishes</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Pikmin: Peaches">
+          <button type="button" class="gallery-open" aria-label="View Pikmin: Peaches from Other">
+            <img src="/images/projects/other/pikmin_peaches.jpg" alt="Pikmin: Peaches, artwork from Other" loading="lazy" decoding="async">
+            <span>Pikmin: Peaches</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Pikmin: PNF-404">
+          <button type="button" class="gallery-open" aria-label="View Pikmin: PNF-404 from Other">
+            <img src="/images/projects/other/pikmin_pnf404.jpg" alt="Pikmin: PNF-404, artwork from Other" loading="lazy" decoding="async">
+            <span>Pikmin: PNF-404</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Pikmin: Times of Day">
+          <button type="button" class="gallery-open" aria-label="View Pikmin: Times of Day from Other">
+            <img src="/images/projects/other/pikmin_times_of_day.jpg" alt="Pikmin: Times of Day, artwork from Other" loading="lazy" decoding="async">
+            <span>Pikmin: Times of Day</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="other" data-gallery-project="Other" data-gallery-title="Stardew Valley">
+          <button type="button" class="gallery-open" aria-label="View Stardew Valley from Other">
+            <img src="/images/projects/other/stardew_valley.jpg" alt="Stardew Valley, artwork from Other" loading="lazy" decoding="async">
+            <span>Stardew Valley</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Book cover">
+          <button type="button" class="gallery-open" aria-label="View Book cover from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/book_cover.jpg" alt="Book cover, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Book cover</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Anchor character sheet">
+          <button type="button" class="gallery-open" aria-label="View Anchor character sheet from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_anchor.jpg" alt="Anchor character sheet, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Anchor character sheet</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Billy character sheet">
+          <button type="button" class="gallery-open" aria-label="View Billy character sheet from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_billy.jpg" alt="Billy character sheet, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Billy character sheet</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Capstan character sheet">
+          <button type="button" class="gallery-open" aria-label="View Capstan character sheet from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_capstan.jpg" alt="Capstan character sheet, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Capstan character sheet</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Character height chart">
+          <button type="button" class="gallery-open" aria-label="View Character height chart from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_height_chart.jpg" alt="Character height chart, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Character height chart</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Jiya character sheet">
+          <button type="button" class="gallery-open" aria-label="View Jiya character sheet from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_jiya.jpg" alt="Jiya character sheet, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Jiya character sheet</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard character sheet">
+          <button type="button" class="gallery-open" aria-label="View Starboard character sheet from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/character_sheet_starboard.jpg" alt="Starboard character sheet, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard character sheet</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="St Mary's Lighthouse">
+          <button type="button" class="gallery-open" aria-label="View St Mary's Lighthouse from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/lighthouse_st_mary.jpg" alt="St Mary's Lighthouse, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>St Mary's Lighthouse</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Peakly Bay map">
+          <button type="button" class="gallery-open" aria-label="View Peakly Bay map from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/peakly_bay_map.jpg" alt="Peakly Bay map, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Peakly Bay map</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 1">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 1 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_1.jpg" alt="Starboard &amp; the Sea-Cat 1, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 1</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 2">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 2 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_2.jpg" alt="Starboard &amp; the Sea-Cat 2, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 2</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 3">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 3 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_3.jpg" alt="Starboard &amp; the Sea-Cat 3, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 3</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 4">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 4 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_4.jpg" alt="Starboard &amp; the Sea-Cat 4, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 4</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 5">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 5 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_5.jpg" alt="Starboard &amp; the Sea-Cat 5, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 5</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 6">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 6 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_6.jpg" alt="Starboard &amp; the Sea-Cat 6, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 6</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard &amp; the Sea-Cat 7">
+          <button type="button" class="gallery-open" aria-label="View Starboard &amp; the Sea-Cat 7 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/sbtsc_7.jpg" alt="Starboard &amp; the Sea-Cat 7, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard &amp; the Sea-Cat 7</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 1">
+          <button type="button" class="gallery-open" aria-label="View Seals 1 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_1.jpg" alt="Seals 1, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 1</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 2">
+          <button type="button" class="gallery-open" aria-label="View Seals 2 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_2.jpg" alt="Seals 2, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 2</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 3">
+          <button type="button" class="gallery-open" aria-label="View Seals 3 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_3.jpg" alt="Seals 3, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 3</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 4">
+          <button type="button" class="gallery-open" aria-label="View Seals 4 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_4.jpg" alt="Seals 4, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 4</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 5">
+          <button type="button" class="gallery-open" aria-label="View Seals 5 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_5.jpg" alt="Seals 5, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 5</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Seals 6">
+          <button type="button" class="gallery-open" aria-label="View Seals 6 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/seals_6.jpg" alt="Seals 6, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Seals 6</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Starboard logo">
+          <button type="button" class="gallery-open" aria-label="View Starboard logo from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/starboard_logo.jpg" alt="Starboard logo, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Starboard logo</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Window 1">
+          <button type="button" class="gallery-open" aria-label="View Window 1 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/window_1.jpg" alt="Window 1, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Window 1</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Window 2">
+          <button type="button" class="gallery-open" aria-label="View Window 2 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/window_2.jpg" alt="Window 2, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Window 2</span>
+          </button>
+        </figure>
+        <figure class="gallery-item" data-gallery-category="starboard" data-gallery-project="Starboard &amp; the Sea-Cat" data-gallery-title="Window 3">
+          <button type="button" class="gallery-open" aria-label="View Window 3 from Starboard &amp; the Sea-Cat">
+            <img src="/images/projects/starboard-sea-cat/window_3.jpg" alt="Window 3, artwork from Starboard &amp; the Sea-Cat" loading="lazy" decoding="async">
+            <span>Window 3</span>
+          </button>
+        </figure>
         </div>
       </div>
     </section>
@@ -148,11 +516,23 @@
     </section>
   </main>
 
+  <dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title">
+    <button type="button" class="gallery-close" aria-label="Close enlarged artwork">Close</button>
+    <div class="gallery-dialog__media">
+      <img src="" alt="">
+    </div>
+    <div class="gallery-dialog__caption">
+      <p class="eyebrow"></p>
+      <h2 id="gallery-dialog-title"></h2>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>Unspoken Illusions</p>
       <p>Stories told without words</p>
     </div>
   </footer>
+  <script src="/gallery.js" defer></script>
 </body>
 </html>
