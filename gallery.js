@@ -1,5 +1,21 @@
 const filters = document.querySelectorAll("[data-gallery-filter]")
 const items = document.querySelectorAll("[data-gallery-category]")
+const projectContext = document.querySelector("[data-project-context]")
+
+const projectDescriptions = {
+  "mass-hysteria": {
+    title: "Mass Hysteria",
+    description: "Original concept comic."
+  },
+  "tune-up": {
+    title: "Tune Up",
+    description: "Original rhythm game concept."
+  },
+  "starboard": {
+    title: "Starboard the Sea-Cat",
+    description: "Original illustrated story project."
+  }
+}
 
 filters.forEach(filter => {
   filter.addEventListener("click", () => {
@@ -12,6 +28,18 @@ filters.forEach(filter => {
     items.forEach(item => {
       item.hidden = selected !== "all" && item.dataset.galleryCategory !== selected
     })
+
+    if (projectContext) {
+      const context = projectDescriptions[selected]
+
+      if (context) {
+        projectContext.querySelector(".project-context__title").textContent = context.title
+        projectContext.querySelector(".project-context__description").textContent = context.description
+        projectContext.hidden = false
+      } else {
+        projectContext.hidden = true
+      }
+    }
   })
 })
 
