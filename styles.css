@@ -130,15 +130,13 @@ a:focus-visible {
 }
 
 .section-heading h2,
-.about-contact h2,
-.starboard h2 {
+.about-contact h2 {
   margin-bottom: 0.8rem;
   font-size: clamp(2rem, 5vw, 3.8rem);
 }
 
 .section-heading p:last-child,
-.about-contact p:last-child,
-.starboard__copy p:last-child {
+.about-contact p:last-child {
   margin-bottom: 0;
 }
 
@@ -303,6 +301,20 @@ a:focus-visible {
   color: var(--warm-cream);
 }
 
+/* Give selected personal projects a little context without competing with the artwork. */
+.project-context {
+  margin: calc(-1 * clamp(1rem, 2vw, 1.5rem)) 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.project-context__title {
+  margin-bottom: 0.2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.project-context__description {
+  margin-bottom: 0;
+}
+
 .portfolio-gallery {
   column-count: 3;
   column-gap: clamp(1rem, 2.5vw, 1.5rem);
@@ -407,55 +419,8 @@ a:focus-visible {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-/* 09) Starboard */
-.starboard {
-  background: var(--deep-ocean);
-  color: #ffffff;
-}
+/* 09) Services and contact */
 
-.starboard__intro {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
-  align-items: center;
-  gap: clamp(2rem, 6vw, 5rem);
-  margin-bottom: clamp(2.5rem, 6vw, 5rem);
-}
-
-.starboard__copy {
-  max-width: 34rem;
-}
-
-.starboard__logo {
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--large-radius);
-  background: #ffffff;
-}
-
-.starboard__logo img {
-  width: 100%;
-  height: auto;
-}
-
-.starboard__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 1rem;
-}
-
-.starboard__gallery figure {
-  margin: 0;
-}
-
-.starboard__gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--small-radius);
-  background: #ffffff;
-}
-
-/* 10) Services and contact */
 .about-contact__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -484,7 +449,7 @@ a:focus-visible {
   color: var(--ink);
 }
 
-/* 11) Footer */
+/* 10) Footer */
 .site-footer {
   padding-block: 2rem;
   background: var(--ink);
@@ -501,10 +466,9 @@ a:focus-visible {
   margin: 0;
 }
 
-/* 12) Tablet */
+/* 11) Tablet */
 @media (max-width: 900px) {
-  .hero__grid,
-  .starboard__intro {
+  .hero__grid {
     grid-template-columns: 1fr;
   }
 
@@ -524,12 +488,9 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .starboard__gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
-/* 13) Mobile */
+/* 12) Mobile */
 @media (max-width: 620px) {
   .site-header__inner {
     align-items: flex-start;
@@ -551,9 +512,6 @@ a:focus-visible {
     column-count: 1;
   }
 
-  .starboard__gallery {
-    grid-template-columns: 1fr;
-  }
 
   .site-footer__inner {
     flex-direction: column;
