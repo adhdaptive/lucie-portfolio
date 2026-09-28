@@ -268,88 +268,146 @@ a:focus-visible {
   height: auto;
 }
 
-/* 08) Services */
-.services {
-  background: var(--soft-aqua);
+/* 08) Portfolio gallery */
+.portfolio-browser {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
-.service-card {
-  min-height: 15rem;
-  padding: clamp(1.35rem, 2.5vw, 2rem);
-  border-top: 0.45rem solid var(--card-accent);
-  border-radius: 0 0 var(--small-radius) var(--small-radius);
-  background: var(--warm-cream);
+.gallery-filter {
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(16, 21, 29, 0.18);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
 }
 
-.service-card h3 {
-  margin-bottom: 0.8rem;
-  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+.gallery-filter:hover,
+.gallery-filter:focus-visible {
+  background: #ffffff;
+  color: var(--deep-ocean);
 }
 
-.service-card p {
-  margin-bottom: 0;
+.gallery-filter[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--warm-cream);
 }
 
-.service-card--puppets {
-  --card-accent: var(--cat-eye-yellow);
+.portfolio-gallery {
+  column-count: 3;
+  column-gap: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.service-card--characters {
-  --card-accent: var(--sunset-coral);
+.gallery-item {
+  break-inside: avoid;
+  margin: 0 0 clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.service-card--branding {
-  --card-accent: var(--sea-pink);
+.gallery-item[hidden] {
+  display: none;
 }
 
-.service-card--worlds {
-  --card-accent: var(--deep-ocean);
+.gallery-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-/* 09) Selected work */
-.section-heading--split {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 25rem);
-  align-items: end;
-  gap: 2rem;
-  max-width: none;
-}
-
-.section-heading--split > p {
-  margin-bottom: 0.55rem;
-}
-
-.work-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  gap: clamp(1.25rem, 3vw, 2.5rem);
-}
-
-.work-card {
-  margin: 0;
-}
-
-.work-card img {
+.gallery-open img {
   width: 100%;
   height: auto;
   border-radius: var(--small-radius);
   background: #ffffff;
 }
 
-.work-card figcaption {
-  padding-top: 0.7rem;
+.gallery-open span {
+  display: block;
+  padding: 0.6rem 0.15rem 0;
   font-size: 0.92rem;
   font-weight: var(--font-weight-semibold);
 }
 
-/* 10) Starboard */
+.gallery-open:hover span,
+.gallery-open:focus-visible span {
+  color: var(--deep-ocean);
+}
+
+/* Keep the enlarged artwork focused on the image rather than the surrounding interface. */
+.gallery-dialog {
+  width: min(94vw, 72rem);
+  max-height: 92vh;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border: 0;
+  border-radius: var(--large-radius);
+  background: var(--warm-cream);
+  color: var(--ink);
+}
+
+.gallery-dialog::backdrop {
+  background: rgba(16, 21, 29, 0.82);
+}
+
+.gallery-close {
+  display: block;
+  margin: 0 0 1rem auto;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(16, 21, 29, 0.18);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+.gallery-close:hover,
+.gallery-close:focus-visible {
+  color: var(--deep-ocean);
+}
+
+.gallery-dialog__media {
+  display: grid;
+  place-items: center;
+}
+
+.gallery-dialog__media img {
+  width: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  border-radius: var(--small-radius);
+  object-fit: contain;
+}
+
+.gallery-dialog__caption {
+  padding-top: 1rem;
+}
+
+.gallery-dialog__caption .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.gallery-dialog__caption h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* 09) Starboard */
 .starboard {
   background: var(--deep-ocean);
   color: #ffffff;
@@ -397,7 +455,7 @@ a:focus-visible {
   background: #ffffff;
 }
 
-/* 11) About and contact */
+/* 10) About and contact */
 .about-contact__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -414,7 +472,7 @@ a:focus-visible {
   color: var(--ink);
 }
 
-/* 12) Footer */
+/* 11) Footer */
 .site-footer {
   padding-block: 2rem;
   background: var(--ink);
@@ -431,7 +489,7 @@ a:focus-visible {
   margin: 0;
 }
 
-/* 13) Tablet */
+/* 12) Tablet */
 @media (max-width: 900px) {
   .hero__grid,
   .starboard__intro {
@@ -446,11 +504,10 @@ a:focus-visible {
     max-width: 42rem;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .portfolio-gallery {
+    column-count: 2;
   }
 
-  .section-heading--split,
   .about-contact__grid {
     grid-template-columns: 1fr;
   }
@@ -460,7 +517,7 @@ a:focus-visible {
   }
 }
 
-/* 14) Mobile */
+/* 13) Mobile */
 @media (max-width: 620px) {
   .site-header__inner {
     align-items: flex-start;
@@ -478,14 +535,12 @@ a:focus-visible {
     font-size: clamp(2.8rem, 15vw, 4.5rem);
   }
 
-  .service-grid,
-  .work-gallery,
-  .starboard__gallery {
-    grid-template-columns: 1fr;
+  .portfolio-gallery {
+    column-count: 1;
   }
 
-  .service-card {
-    min-height: auto;
+  .starboard__gallery {
+    grid-template-columns: 1fr;
   }
 
   .site-footer__inner {
