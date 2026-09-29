@@ -1,4 +1,5 @@
 const filters = document.querySelectorAll("[data-gallery-filter]")
+const serviceLinks = document.querySelectorAll("[data-service-filter]")
 const items = document.querySelectorAll("[data-gallery-category]")
 const projectContext = document.querySelector("[data-project-context]")
 
@@ -17,29 +18,66 @@ const projectDescriptions = {
   }
 }
 
+const updateContext = (title = "", description = "") => {
+  if (!projectContext) return
+
+  if (!title) {
+    projectContext.hidden = true
+    return
+  }
+
+  projectContext.querySelector(".project-context__title").textContent = title
+  projectContext.querySelector(".project-context__description").textContent = description
+  projectContext.hidden = false
+}
+
+const clearServiceState = () => {
+  serviceLinks.forEach(link => link.removeAttribute("aria-current"))
+}
+
+const applyProjectFilter = selected => {
+  filters.forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.galleryFilter === selected))
+  })
+
+  clearServiceState()
+
+  items.forEach(item => {
+    item.hidden = selected !== "all" && item.dataset.galleryCategory !== selected
+  })
+
+  const context = projectDescriptions[selected]
+  updateContext(context?.title, context?.description)
+}
+
+const applyServiceFilter = (selected, label, activeLink) => {
+  filters.forEach(button => button.setAttribute("aria-pressed", "false"))
+
+  serviceLinks.forEach(link => {
+    if (link === activeLink) {
+      link.setAttribute("aria-current", "true")
+    } else {
+      link.removeAttribute("aria-current")
+    }
+  })
+
+  items.forEach(item => {
+    const services = (item.dataset.galleryServices || "").split(" ").filter(Boolean)
+    item.hidden = !services.includes(selected)
+  })
+
+  updateContext(label, "Selected examples from the portfolio.")
+}
+
 filters.forEach(filter => {
   filter.addEventListener("click", () => {
-    const selected = filter.dataset.galleryFilter
+    applyProjectFilter(filter.dataset.galleryFilter)
+  })
+})
 
-    filters.forEach(button => {
-      button.setAttribute("aria-pressed", String(button === filter))
-    })
-
-    items.forEach(item => {
-      item.hidden = selected !== "all" && item.dataset.galleryCategory !== selected
-    })
-
-    if (projectContext) {
-      const context = projectDescriptions[selected]
-
-      if (context) {
-        projectContext.querySelector(".project-context__title").textContent = context.title
-        projectContext.querySelector(".project-context__description").textContent = context.description
-        projectContext.hidden = false
-      } else {
-        projectContext.hidden = true
-      }
-    }
+serviceLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    applyServiceFilter(link.dataset.serviceFilter, link.textContent.trim(), link)
   })
 })
 
