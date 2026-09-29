@@ -135,7 +135,6 @@ a:focus-visible {
   font-size: clamp(2rem, 5vw, 3.8rem);
 }
 
-.section-heading p:last-child,
 .about-contact p:last-child {
   margin-bottom: 0;
 }
@@ -147,10 +146,6 @@ a:focus-visible {
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.eyebrow--light {
-  color: var(--soft-aqua);
 }
 
 /* 05) Skip link */
@@ -213,73 +208,56 @@ a:focus-visible {
 
 /* 07) Hero */
 .hero {
-  padding-top: clamp(2.5rem, 5vw, 5rem);
+  padding-top: clamp(2.25rem, 4vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(22rem, 1.1fr);
+  grid-template-columns: minmax(0, 0.75fr) minmax(24rem, 1.25fr);
   align-items: center;
-  gap: clamp(2.5rem, 6vw, 6rem);
+  gap: clamp(2rem, 5vw, 5rem);
 }
 
 .hero__copy h1 {
-  max-width: 12ch;
-  margin-bottom: 1.25rem;
-  font-size: clamp(3.2rem, 6.8vw, 6.4rem);
+  max-width: 11ch;
+  margin-bottom: 0;
+  font-size: clamp(3.2rem, 6.4vw, 6rem);
   letter-spacing: -0.045em;
-}
-
-.hero__intro {
-  max-width: 34rem;
-  margin-bottom: 2rem;
-  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  min-height: 3rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  background: var(--ink);
-  color: var(--warm-cream);
-  font-weight: var(--font-weight-bold);
-  text-decoration: none;
-}
-
-.button:hover,
-.button:focus-visible {
-  background: var(--deep-ocean);
-  color: #ffffff;
 }
 
 .hero__art {
   overflow: hidden;
   margin: 0;
   border-radius: var(--large-radius);
-  background: var(--soft-aqua);
+  background: #ffffff;
 }
 
 .hero__art img {
   width: 100%;
+  max-height: 32rem;
   height: auto;
+  object-fit: contain;
 }
 
 /* 08) Portfolio gallery */
 .portfolio-browser {
-  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.portfolio-browser .section-heading {
+  margin-bottom: 1.25rem;
 }
 
 .gallery-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .gallery-filter {
-  padding: 0.7rem 1rem;
+  padding: 0.65rem 0.95rem;
   border: 1px solid rgba(16, 21, 29, 0.18);
   border-radius: 999px;
   background: transparent;
@@ -301,13 +279,13 @@ a:focus-visible {
   color: var(--warm-cream);
 }
 
-/* Give selected personal projects a little context without competing with the artwork. */
+/* Show only the small amount of context needed for the active project or work type. */
 .project-context {
-  margin: calc(-1 * clamp(1rem, 2vw, 1.5rem)) 0 clamp(2rem, 5vw, 3.5rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .project-context__title {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
   font-weight: var(--font-weight-bold);
 }
 
@@ -316,48 +294,49 @@ a:focus-visible {
 }
 
 .portfolio-gallery {
-  column-count: 3;
-  column-gap: clamp(1rem, 2.5vw, 1.5rem);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.8vw, 1.25rem);
 }
 
 .gallery-item {
-  break-inside: avoid;
-  margin: 0 0 clamp(1rem, 2.5vw, 1.5rem);
+  min-width: 0;
+  margin: 0;
 }
 
 .gallery-item[hidden] {
   display: none;
 }
 
+/* Keep thumbnails compact and consistent while preserving the full artwork inside each frame. */
 .gallery-open {
-  display: block;
+  display: grid;
+  place-items: center;
   width: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  aspect-ratio: 4 / 3;
+  padding: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(16, 21, 29, 0.1);
+  border-radius: var(--small-radius);
+  background: #ffffff;
   color: var(--ink);
   font: inherit;
-  text-align: left;
   cursor: pointer;
+}
+
+.gallery-open:hover,
+.gallery-open:focus-visible {
+  border-color: var(--deep-ocean);
 }
 
 .gallery-open img {
   width: 100%;
-  height: auto;
-  border-radius: var(--small-radius);
-  background: #ffffff;
+  height: 100%;
+  object-fit: contain;
 }
 
 .gallery-open span {
-  display: block;
-  padding: 0.6rem 0.15rem 0;
-  font-size: 0.92rem;
-  font-weight: var(--font-weight-semibold);
-}
-
-.gallery-open:hover span,
-.gallery-open:focus-visible span {
-  color: var(--deep-ocean);
+  display: none;
 }
 
 /* Keep the enlarged artwork focused on the image rather than the surrounding interface. */
@@ -419,7 +398,7 @@ a:focus-visible {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-/* 09) Services and contact */
+/* 09) What I do and contact */
 
 .about-contact__grid {
   display: grid;
@@ -427,16 +406,27 @@ a:focus-visible {
   gap: clamp(2rem, 6vw, 6rem);
 }
 
-/* Keep the service offer easy to scan without turning it back into a card grid. */
-.services-list {
+/* Keep the work types easy to scan and let linked items open matching gallery examples. */
+.work-types-list {
   display: grid;
   gap: 0.7rem;
   margin: 1.4rem 0 0;
   padding-left: 1.25rem;
 }
 
-.services-list li {
+.work-types-list li {
   padding-left: 0.2rem;
+}
+
+.work-types-list a {
+  color: var(--ink);
+  font-weight: var(--font-weight-semibold);
+}
+
+.work-types-list a:hover,
+.work-types-list a:focus-visible,
+.work-types-list a[aria-current="true"] {
+  color: var(--deep-ocean);
 }
 
 .contact-panel {
@@ -467,6 +457,12 @@ a:focus-visible {
 }
 
 /* 11) Tablet */
+@media (max-width: 1000px) {
+  .portfolio-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   .hero__grid {
     grid-template-columns: 1fr;
@@ -477,41 +473,67 @@ a:focus-visible {
   }
 
   .hero__art {
-    max-width: 42rem;
-  }
-
-  .portfolio-gallery {
-    column-count: 2;
+    max-width: 44rem;
   }
 
   .about-contact__grid {
     grid-template-columns: 1fr;
   }
-
 }
 
 /* 12) Mobile */
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .site-header__inner {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding-block: 1rem;
+    gap: 1rem;
+    min-height: 4.25rem;
+  }
+
+  .site-name {
+    font-size: 1.05rem;
   }
 
   .site-nav {
-    width: 100%;
-    gap: 0.8rem 1.25rem;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__grid {
+    gap: 1.5rem;
   }
 
   .hero__copy h1 {
-    font-size: clamp(2.8rem, 15vw, 4.5rem);
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .hero__art img {
+    max-height: 20rem;
+  }
+
+  .gallery-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    scrollbar-width: thin;
+  }
+
+  .gallery-filter {
+    flex: 0 0 auto;
   }
 
   .portfolio-gallery {
-    column-count: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
+  .gallery-open {
+    padding: 0.35rem;
+  }
 
   .site-footer__inner {
     flex-direction: column;
