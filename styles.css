@@ -1,9 +1,6 @@
-/*
-  Unspoken Illustrations portfolio
-  First homepage prototype
-*/
+/* Unspoken Illustrations */
 
-/* 01) Typography */
+/* Typography */
 @font-face {
   font-family: 'Quicksand';
   src: url('/fonts/quicksand-variable.woff2') format('woff2');
@@ -12,9 +9,9 @@
   font-display: swap;
 }
 
-/* 02) Design tokens */
+/* Design tokens */
 :root {
-  /* Lucie's selected colour palette */
+  /* Colour palette */
   --ink: #10151d;
   --sea-blue: #55b8d1;
   --soft-aqua: #bfe4e1;
@@ -46,7 +43,7 @@
   --colour-accent: var(--sunset-coral);
 }
 
-/* 03) Base */
+/* Base */
 *,
 *::before,
 *::after {
@@ -101,20 +98,18 @@ a:focus-visible {
   color: var(--colour-link-hover);
 }
 
-/* Keep keyboard focus obvious across light and dark sections. */
 :focus-visible {
   outline: 3px solid var(--cat-eye-yellow);
   outline-offset: 4px;
 }
 
-/* Respect visitors who have reduced motion enabled. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/* 04) Shared layout */
+/* Shared layout */
 .container {
   width: min(calc(100% - (2 * var(--page-gutter))), var(--content-width));
   margin-inline: auto;
@@ -148,7 +143,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-/* 05) Skip link */
+/* Skip link */
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -167,7 +162,7 @@ a:focus-visible {
   color: var(--warm-cream);
 }
 
-/* 06) Header */
+/* Header */
 .site-header {
   border-bottom: 1px solid rgba(16, 21, 29, 0.12);
   background: var(--warm-cream);
@@ -206,7 +201,7 @@ a:focus-visible {
   color: var(--deep-ocean);
 }
 
-/* 07) Hero */
+/* Hero */
 .hero {
   padding-top: clamp(2.25rem, 4vw, 4rem);
   padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
@@ -239,7 +234,7 @@ a:focus-visible {
   object-fit: contain;
 }
 
-/* 08) Portfolio gallery */
+/* Portfolio gallery */
 .portfolio-browser {
   padding-top: clamp(2.5rem, 5vw, 4rem);
 }
@@ -278,7 +273,6 @@ a:focus-visible {
   color: var(--warm-cream);
 }
 
-/* Show only the small amount of context needed for the active project or work type. */
 .project-context {
   margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
 }
@@ -307,7 +301,6 @@ a:focus-visible {
   display: none;
 }
 
-/* Keep thumbnails compact and consistent while preserving the full artwork inside each frame. */
 .gallery-open {
   display: grid;
   place-items: center;
@@ -338,7 +331,6 @@ a:focus-visible {
   display: none;
 }
 
-/* Keep the enlarged artwork focused on the image rather than the surrounding interface. */
 .gallery-dialog {
   width: min(94vw, 72rem);
   max-height: 92vh;
@@ -397,7 +389,7 @@ a:focus-visible {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-/* 09) What I do and contact */
+/* Services and contact */
 
 .about-contact__grid {
   display: grid;
@@ -405,7 +397,6 @@ a:focus-visible {
   gap: clamp(2rem, 6vw, 6rem);
 }
 
-/* Keep the work types easy to scan and let linked items open matching gallery examples. */
 .work-types-list {
   display: grid;
   gap: 0.7rem;
@@ -438,6 +429,59 @@ a:focus-visible {
   color: var(--ink);
 }
 
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.6rem;
+  background: var(--warm-cream);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 9rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid var(--deep-ocean);
+  outline-offset: 2px;
+}
+
+.contact-form__submit {
+  justify-self: start;
+  padding: 0.8rem 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--warm-cream);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  background: var(--deep-ocean);
+}
 
 .social-links {
   display: flex;
@@ -462,7 +506,7 @@ a:focus-visible {
   color: inherit;
 }
 
-/* 10) Footer */
+/* Footer */
 .site-footer {
   padding-block: 2rem;
   background: var(--ink);
@@ -479,7 +523,7 @@ a:focus-visible {
   margin: 0;
 }
 
-/* 11) Tablet */
+/* Tablet */
 @media (max-width: 1000px) {
   .portfolio-gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -504,7 +548,7 @@ a:focus-visible {
   }
 }
 
-/* 12) Mobile */
+/* Mobile */
 @media (max-width: 700px) {
   .site-header__inner {
     gap: 1rem;
