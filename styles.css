@@ -221,6 +221,12 @@ a:focus-visible {
   letter-spacing: -0.045em;
 }
 
+.hero__intro {
+  max-width: 38rem;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
 .hero__art {
   overflow: hidden;
   margin: 0;
