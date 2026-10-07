@@ -491,7 +491,22 @@
         <div class="contact-panel">
           <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Get in touch</h2>
-          <p>A contact form will be added here once Formspree is connected.</p>
+          <form class="contact-form" action="https://formspree.io/f/maeqeelj" method="POST">
+            <div class="contact-form__field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="6" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New enquiry from Unspoken Illustrations">
+            <button class="contact-form__submit" type="submit">Send message</button>
+          </form>
           <p class="social-links">
             <a href="https://www.instagram.com/_togemo/" target="_blank" rel="noopener noreferrer"><img src="/images/instagram.webp" alt="" aria-hidden="true">Instagram @_togemo</a>
             <a href="https://www.tiktok.com/@alphenjoyer" target="_blank" rel="noopener noreferrer"><img src="/images/icons8-tiktok-30.png" alt="" aria-hidden="true">TikTok @alphenjoyer</a>
